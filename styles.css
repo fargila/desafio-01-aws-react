@@ -1,0 +1,26 @@
+body{
+    background-color: #FF6064;
+    text-align: center;
+    display: grid;
+    place-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    height: 100vh;
+}
+#logo{
+    width: 160px;
+    height: 160px;
+}
+#loading{
+    width: 45px;
+    height: 45px;
+}
+
+.main{
+    display: flex;
+    flex-direction: column;
+    height: 380px;
+    justify-content: space-between;
+    
+}
