@@ -1,0 +1,40 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    margin-top: 5%;
+}
+
+#img1{
+    width: 50%;
+    height: auto;
+}
+
+.btnsDiv{
+    display: flex;
+    align-self: center;
+    justify-content: space-evenly;
+}
+
+.btn{
+    border-radius: 50%;
+}
+
+.mainBtn{
+    border: none;
+    background-color: #FF6064;
+    color: white;
+    border-radius: 1.5rem;
+    padding-left: 10%;
+    padding-right: 10%;
+    margin-top: 5%;
+}
+
+button:hover{
+    cursor: pointer;
+}
+
+.mainBtn:hover{
+    box-shadow: 10px 10px 15px;
+}
