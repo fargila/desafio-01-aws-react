@@ -1,42 +1,95 @@
 body{
-    display: flex;
     background-color: #FF6064;
+    text-align: center;
+    display: flex;
     justify-content: center;
+    align-items: center; 
+    height: 100vh;
+    font-family: 'Inter';
 }
 
-.container{
-    display: flex;
-    background-color: white;
-    border-radius: 1.5rem;
-    box-shadow: 2px 2px 2px black;
-    flex-wrap: wrap;
+input{
+    margin: 3px;
+}
+
+label{
+    padding-left: 15px;
 }
 
 button:hover{
     cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-img{
-    width: 150px;
+#logo{
+    width: 220px;
+    height: 220px;
 }
 
-form{
-    flex-wrap: wrap;
+.imageLogo{
+    margin-right: 10%;
+}
+
+input{
+    padding-left: 10px;
+}
+
+input, button{
+    border-radius: 1.5rem;
+    height: 30px;
+    font-family: 'Inter';
+}
+
+.container{
+    box-shadow: 2px 2px 2px black;
+    border-radius: 1.5rem;
+    text-align: start;
+    background-color: white;
     display: flex;
     flex-direction: column;
-    margin: 10%;
+    padding: 5%;
+    padding-bottom: 100px;
+    width: 250px;
+}
+
+.labels{
+    display: flex;
+    flex-direction: column;
+}
+
+.head{
+    margin-bottom: 40px;
 }
 
 .btnsDiv{
-    align-items: center;
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
 }
 
-button, input{
-    border-radius: 1.5rem;
-    
+.btnsDiv>button{
+    width: 120px;
+    height: 35px;
 }
 
-#createAcc{
+#redBtn{
     background-color: #FF6064;
     color: white;
+    border: none;
+}
+#redBtn:hover{
+    box-shadow: 1.5px 1.5px black;
+}
+
+#backBtn{
+    background-color: white;
+}
+#backBtn:hover{
+    background-color: #DDDDDD;
+}
+
+/* Mobile */
+@media (max-width: 376px){
+
+
 }

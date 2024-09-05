@@ -1,0 +1,90 @@
+body{
+    text-align: center;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items:start; 
+    height: 100vh;
+    font-family: "Inter", system-ui;
+}
+
+button{
+    font-family: 'Inter', sans-serif;
+    border: none;
+}
+
+.goBack{
+    grid-column: 1;
+}
+
+.redBtn:hover{
+    box-shadow: 3px 3px black;
+}
+
+.container{
+    grid-column: 2;
+    justify-self: center;
+}
+
+.vector:hover{
+    cursor: pointer;
+}
+
+.redBtn{
+    cursor: pointer;
+    background-color: #FF6064;
+    color: white;
+    border-radius: 1.5rem;
+    height: 3rem;
+    width: 100%;
+    font-size: large;
+}
+
+.btn{
+    background-color: #D9D9D9;
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    margin: 4px;
+}
+
+#btn2{
+    background-color: #FF6064;
+    height: 15px;
+    width: 45px;
+    border-radius: 1.5rem;
+    margin-bottom: 40px;
+}
+
+div{
+    margin: 5%;
+}
+
+#img2{
+    width: 100%;
+}
+
+/* Mobile */
+@media (max-width: 376px){
+
+    body{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .goBack{
+        margin: 5px;
+
+    }
+
+    p{
+        font-weight: bold;
+        font-size: 35px;
+    }
+
+    img{
+        width: 30px;
+
+    }
+
+
+}

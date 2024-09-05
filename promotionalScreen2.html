@@ -4,27 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/styles/style.promotionalScreen2.css">
-    <title>Tela 3</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <title>Tela 2</title>
 </head>
 <body>
 
-   <div class="container">
+    <div class="goBack">
+        <div class="vector"><img onclick="window.location.href='promotionalScreen1.html'" src="/images/vector.png" alt=""></div>
+        <div class="redVector" ><imgsrc="/images/redVector.png" alt=""></div>
+    </div>
 
-        <div class="goBackBtn">
-            <button><<</button>
+   <div class="container">
+        <div>
+            <img src="images/imagem2.png" id="img2" alt="An image of two people working to construct a documentation"/>
         </div>
         <div>
-            <img src="images/imagem2.png" id="img2" alt="An image of someone achiving their metas through a pizza graph."/>
-
             <p>Track your productivity & gain insights</p>
+        </div>
 
-            <div class="btnsDiv">
-                <button class="btn">x</button>
-                <button class="btn">x</button>
-                <button class="btn">x</button>
-            </div>
+        <div class="btnsDiv">
+            <button class="btn" id="btn1"></button>
+            <button class="btn" id="btn2"></button>
+            <button class="btn" id="btn3"></button>
+        </div>
 
-            <button class="mainBtn">Next</button>
+        <div>
+            <button class="redBtn" onclick="window.location.href='promotionalScreen3.html'">Next</button>
         </div>
    </div>
     

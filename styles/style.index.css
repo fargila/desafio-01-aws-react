@@ -1,7 +1,6 @@
 body{
     background-color: #FF6064;
     text-align: center;
-    display: grid;
     display: flex;
     justify-content: center;
     align-items: center; 
@@ -22,4 +21,9 @@ body{
     height: 380px;
     justify-content: space-between;
     
+}
+
+/* Mobile */
+@media(max-width: 375px){
+
 }

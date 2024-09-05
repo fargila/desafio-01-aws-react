@@ -4,33 +4,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/styles/style.loginScreen.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
     <title>Tela 5</title>
 </head>
 <body>
 
-   <div class="container">
+    <div class="goBack">
+        <div class="vector"><img onclick="window.location.href='promotionalScreen3.html'" src="/images/vector.png" alt=""></div>
+    </div>
 
-        <div class="goBackBtn">
-            <img id="vector" src="images/vector.png" >
-            <img id="redVector" src="images/redVector.png">
-        </div>
+   <div class="container">
         <div>
-            <h2>Let's log you in</h2>
+            <div><h2 id="title"></h2></div>
 
             <div class="btnsDiv">
-                <button class="btn" id="face"><img src="images/facebookLogo.png">Continue with Facebook</button>
-                <button class="btn" id="google"><img src="images/googleLogo.png">Continue with Google</button>
-                <button class="btn" id="apple"><img src="images/appleLogo.png">Continue with Apple</button>
+                <button class="btn" id="face">
+                    <img src="images/facebookLogo.png">
+                    <p>Continue with Facebook</p>
+                </button>
+                <button class="btn" id="google">
+                    <img src="images/googleLogo.png">
+                    <p>Continue with Google</p>
+                    </button>
+                <button class="btn" id="apple">
+                    <img src="images/appleLogo.png">
+                    <p>Continue with Apple</p>
+                </button>
             </div>
 
-            <div>
-                <h3>Or</h3>
-                <button class="mainBtn">Login with E-mail</button>
+            <div><h3>Or</h3></div>
+
+            <div class="opc">
+                <button class="redBtn" id="textBtn">Login with E-mail</button>
                 <h3>Don't have an account? <a href="createAccountScreen.html">Sign up</a></h3>
             </div>
         </div>
    </div>
     
-    <script src="/scripts/main.js"></script>
+    <script src="/scripts/loginText.js"></script>
 </body>
 </html>
