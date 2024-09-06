@@ -90,6 +90,35 @@ input, button{
 
 /* Mobile */
 @media (max-width: 376px){
+    body{ 
+        display: flex;
+        flex-direction: column;
+    }
 
+    .imageLogo{
+        margin: 0;
+    }
+    
+    .container{
+        width: 100%;
+        height: 100%;
+    }
 
+    .head{
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        font-size: 25px;
+        flex-wrap: wrap;
+        font-style: normal;
+    }
+
+    input{
+        height: 40px;
+    }
+
+    #redBtn, #backBtn{
+        height:45px;
+        width: 45%;
+    }
 }

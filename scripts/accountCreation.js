@@ -1,51 +1,48 @@
+document.addEventListener('DOMContentLoaded', () => {
+    const name = document.getElementById('name');
+    const email = document.getElementById('email');
+    const password = document.getElementById('password');
+    const confirmPassword = document.getElementById('confirmPassword');
+    const form = document.getElementById('accountCreationForm');
+    const errorElement = document.getElementById('error');
 
-        // Função para carregar dados do localStorage e preencher o formulário
-        function loadFormData() {
-            const name = localStorage.getItem('name');
-            const email = localStorage.getItem('email');
-            const password = localStorage.getItem('password');
-            const confirmPassword = localStorage.getItem('confirmPassword');
-
-            if (name) document.getElementById('name').value = name;
-            if (email) document.getElementById('email').value = email;
-            if (password) document.getElementById('password').value = password;
-            if (confirmPassword) document.getElementById('confirmPassword').value = confirmPassword;
+    form.addEventListener('submit', (e) => {
+        let messages = [];
+        
+        // Check if name field is empty
+        if (name.value.trim() === '') {
+            messages.push('Name is required');
         }
 
-        // Função para validar se a senha e a confirmação de senha são iguais
-        function validatePasswords() {
-            const password = document.getElementById('password').value;
-            const confirmPassword = document.getElementById('confirmPassword').value;
-
-            if (password !== confirmPassword) {
-                alert('A senha e a confirmação da senha não coincidem.');
-                return false; // Impede o envio do formulário
-            }
-            return true; // Permite o envio do formulário
+        // Check if email field is empty
+        if (email.value.trim() === '') {
+            messages.push('Email is required');
         }
 
-        // Função para salvar dados do formulário no localStorage
-        function saveFormData() {
-            const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
-            const password = document.getElementById('password').value;
-            const confirmPassword = document.getElementById('confirmPassword').value;
-
-            localStorage.setItem('name', name);
-            localStorage.setItem('email', email);
-            localStorage.setItem('password', password);
-            localStorage.setItem('confirmPassword', confirmPassword);
+        // Check if password field is empty
+        if (password.value.trim() === '') {
+            messages.push('Password is required');
         }
 
-        // Carregar dados do localStorage quando a página é carregada
-        window.addEventListener('load', loadFormData);
+        // Check if confirm password field is empty or doesn’t match password
+        if (confirmPassword.value.trim() === '') {
+            messages.push('Confirm Password is required');
+        } else if (confirmPassword.value !== password.value) {
+            messages.push('Passwords do not match');
+        }
 
-        // Validar e salvar dados do formulário quando ele é enviado
-        document.getElementById('accountCreationForm').addEventListener('submit', function(event) {
-            event.preventDefault(); // Previne o envio padrão do formulário
-            
-            if (validatePasswords()) {
-                saveFormData();
-                alert('Dados salvos com sucesso!');
-            }
-        });
+        // If there are any messages, prevent form submission and display messages
+        if (messages.length > 0) {
+            e.preventDefault();
+            errorElement.innerText = messages.join(', ');
+        } else {
+            // Store form data in localStorage
+            localStorage.setItem('userData', JSON.stringify({
+                name: name.value,
+                email: email.value
+            }));
+            // Redirect to userPage.html
+            window.location.href = 'userScreen.html';
+        }
+    });
+});
