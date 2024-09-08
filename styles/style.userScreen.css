@@ -1,0 +1,25 @@
+body{
+    background-color: #FF6064;
+    font-family: 'Inter';
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container{
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    width: 35%;
+    border-radius: 1.5rem;
+    align-items: center;
+    height: 35%;
+    box-shadow: 3px 3px;
+}
+
+#userInfo{
+    display: flex;
+    flex-direction: column;
+}
+
