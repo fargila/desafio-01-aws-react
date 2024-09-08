@@ -1,7 +1,3 @@
-// setTimeout(function() {
-//     window.location.href = 'intro.html';
-// }, 4000);
-
 document.querySelector('#face').addEventListener('click', function(){
     window.location.href = 'https://www.facebook.com'
 })
